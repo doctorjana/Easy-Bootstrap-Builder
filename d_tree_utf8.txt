@@ -1,0 +1,250 @@
+﻿ Volume in drive D is WORK
+ Volume Serial Number is 8A88-E28B
+
+ Directory of d:\Bootstrap
+
+11-Jan-26  11:44 PM    <DIR>          .
+11-Jan-26  11:44 AM    <DIR>          ..
+11-Jan-26  07:00 PM    <DIR>          .git
+11-Jan-26  11:40 PM    <DIR>          bootstrap-5.3.8-examples
+11-Jan-26  12:53 PM    <DIR>          css
+11-Jan-26  04:03 PM    <DIR>          js
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  11:44 PM    <DIR>          ..
+11-Jan-26  07:00 PM    <DIR>          hooks
+11-Jan-26  07:00 PM    <DIR>          info
+11-Jan-26  07:00 PM    <DIR>          logs
+11-Jan-26  07:00 PM    <DIR>          objects
+11-Jan-26  07:00 PM    <DIR>          refs
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\hooks
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\info
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\logs
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+11-Jan-26  07:00 PM    <DIR>          refs
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\logs\refs
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+11-Jan-26  07:00 PM    <DIR>          heads
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\logs\refs\heads
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+11-Jan-26  07:00 PM    <DIR>          05
+11-Jan-26  07:00 PM    <DIR>          14
+11-Jan-26  07:00 PM    <DIR>          47
+11-Jan-26  07:00 PM    <DIR>          56
+11-Jan-26  07:00 PM    <DIR>          5e
+11-Jan-26  07:00 PM    <DIR>          95
+11-Jan-26  07:00 PM    <DIR>          9f
+11-Jan-26  07:00 PM    <DIR>          ab
+11-Jan-26  07:00 PM    <DIR>          b5
+11-Jan-26  07:00 PM    <DIR>          ce
+11-Jan-26  07:00 PM    <DIR>          e3
+11-Jan-26  07:00 PM    <DIR>          e9
+11-Jan-26  07:00 PM    <DIR>          info
+11-Jan-26  07:00 PM    <DIR>          pack
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\05
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\14
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\47
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\56
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\5e
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\95
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\9f
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\ab
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\b5
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\ce
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\e3
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\e9
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\info
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\objects\pack
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\refs
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+11-Jan-26  07:00 PM    <DIR>          heads
+11-Jan-26  07:00 PM    <DIR>          tags
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\refs\heads
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\.git\refs\tags
+
+11-Jan-26  07:00 PM    <DIR>          .
+11-Jan-26  07:00 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:44 PM    <DIR>          ..
+11-Jan-26  11:40 PM    <DIR>          cheatsheet-rtl
+11-Jan-26  11:40 PM    <DIR>          checkout
+11-Jan-26  11:40 PM    <DIR>          checkout-rtl
+11-Jan-26  11:40 PM    <DIR>          cover
+11-Jan-26  11:40 PM    <DIR>          dashboard
+11-Jan-26  11:40 PM    <DIR>          dashboard-rtl
+11-Jan-26  11:40 PM    <DIR>          dropdowns
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\cheatsheet-rtl
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\checkout
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\checkout-rtl
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\cover
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\dashboard
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\dashboard-rtl
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\bootstrap-5.3.8-examples\dropdowns
+
+11-Jan-26  11:40 PM    <DIR>          .
+11-Jan-26  11:40 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\css
+
+11-Jan-26  12:53 PM    <DIR>          .
+11-Jan-26  11:44 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of d:\Bootstrap\js
+
+11-Jan-26  04:03 PM    <DIR>          .
+11-Jan-26  11:44 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+     Total Files Listed:
+               0 File(s)              0 bytes
+             104 Dir(s)  25,986,797,568 bytes free

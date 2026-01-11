@@ -31,6 +31,7 @@ class BootstrapBuilder {
         this.selectedComponent = null;
         this.componentCounter = 0;
         this.currentTheme = 'default';
+        this.activePremadeTab = 'all';
 
         // Managers
         this.codeGenerator = new CodeGenerator();
@@ -40,12 +41,20 @@ class BootstrapBuilder {
             () => this.onReorder()
         );
 
+        // UI State
+        this.panels = {
+            sidebar: localStorage.getItem('panel-sidebar') !== 'hidden',
+            properties: localStorage.getItem('panel-properties') !== 'hidden',
+            code: localStorage.getItem('panel-code') !== 'hidden'
+        };
+
         this.init();
     }
 
     init() {
         this.renderComponentsList();
         this.setupEventListeners();
+        this.applyInitialLayout();
         this.updateCodePreview();
         this.saveState();
     }
@@ -57,17 +66,53 @@ class BootstrapBuilder {
         Object.entries(COMPONENTS).forEach(([categoryId, category]) => {
             const categoryEl = document.createElement('div');
             categoryEl.className = 'component-category';
-            categoryEl.innerHTML = `
+
+            let headerHTML = `
                 <div class="category-header" data-category="${categoryId}">
                     <i class="bi ${category.icon}"></i>
                     <span>${category.name}</span>
                 </div>
+            `;
+
+            // Add tabs if category is tabbed
+            if (category.isTabbed && category.tabs) {
+                let tabsHTML = `<div class="category-tabs">`;
+                category.tabs.forEach(tab => {
+                    const isActive = this.activePremadeTab === tab.id;
+                    tabsHTML += `
+                        <div class="category-tab ${isActive ? 'active' : ''}" data-tab="${tab.id}">
+                            <i class="bi ${tab.icon}"></i>
+                            ${tab.name}
+                        </div>
+                    `;
+                });
+                tabsHTML += `</div>`;
+                headerHTML += tabsHTML;
+            }
+
+            categoryEl.innerHTML = `
+                ${headerHTML}
                 <div class="category-items" id="category-${categoryId}"></div>
             `;
 
             const itemsContainer = categoryEl.querySelector('.category-items');
 
+            // Setup tab listeners
+            if (category.isTabbed) {
+                categoryEl.querySelectorAll('.category-tab').forEach(tabBtn => {
+                    tabBtn.addEventListener('click', (e) => {
+                        this.activePremadeTab = e.currentTarget.dataset.tab;
+                        this.renderComponentsList();
+                    });
+                });
+            }
+
             category.items.forEach(item => {
+                // Filter by tab if category is tabbed
+                if (category.isTabbed && this.activePremadeTab !== 'all' && item.tab !== this.activePremadeTab) {
+                    return;
+                }
+
                 const itemEl = document.createElement('div');
                 itemEl.className = 'component-item';
                 itemEl.innerHTML = `
@@ -141,6 +186,99 @@ class BootstrapBuilder {
 
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => this.handleKeyboard(e));
+
+        // Layout Toggles
+        document.getElementById('toggleSidebar')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.togglePanel('sidebar');
+        });
+        document.getElementById('toggleProperties')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.togglePanel('properties');
+        });
+        document.getElementById('toggleCode')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.togglePanel('code');
+        });
+        document.getElementById('btnResetLayout')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.resetLayout();
+        });
+    }
+
+    // Apply layout state on boot
+    applyInitialLayout() {
+        if (!this.panels.sidebar) document.getElementById('componentsSidebar')?.classList.add('panel-hidden');
+        if (!this.panels.properties) document.getElementById('propertiesPanel')?.classList.add('panel-hidden');
+        if (!this.panels.code) document.getElementById('codePanel')?.classList.add('panel-hidden');
+        this.updateViewControls();
+    }
+
+    // Toggle a layout panel
+    togglePanel(type) {
+        const panels = {
+            sidebar: 'componentsSidebar',
+            properties: 'propertiesPanel',
+            code: 'codePanel'
+        };
+
+        const id = panels[type];
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const isHidden = el.classList.contains('panel-hidden');
+        if (isHidden) {
+            el.classList.remove('panel-hidden');
+            this.panels[type] = true;
+            localStorage.setItem(`panel-${type}`, 'visible');
+        } else {
+            el.classList.add('panel-hidden');
+            this.panels[type] = false;
+            localStorage.setItem(`panel-${type}`, 'hidden');
+        }
+
+        this.updateViewControls();
+
+        // Show feedback
+        const action = !isHidden ? 'Hidden' : 'Showed';
+        const name = type.charAt(0).toUpperCase() + type.slice(1);
+        window.toast?.info(`${name} panel ${action.toLowerCase()}`);
+    }
+
+    // Update check icons in View menu
+    updateViewControls() {
+        const types = ['sidebar', 'properties', 'code'];
+        types.forEach(type => {
+            const statusIcon = document.getElementById(`${type}Status`);
+            if (statusIcon) {
+                if (this.panels[type]) {
+                    statusIcon.classList.remove('hidden');
+                } else {
+                    statusIcon.classList.add('hidden');
+                }
+            }
+        });
+    }
+
+    // Reset layout to default
+    resetLayout() {
+        const panels = {
+            sidebar: 'componentsSidebar',
+            properties: 'propertiesPanel',
+            code: 'codePanel'
+        };
+
+        Object.values(panels).forEach(id => {
+            document.getElementById(id)?.classList.remove('panel-hidden');
+        });
+
+        this.panels = { sidebar: true, properties: true, code: true };
+        localStorage.setItem('panel-sidebar', 'visible');
+        localStorage.setItem('panel-properties', 'visible');
+        localStorage.setItem('panel-code', 'visible');
+
+        this.updateViewControls();
+        window.toast?.success('Layout reset to default');
     }
 
     // Find component definition by ID
@@ -169,6 +307,12 @@ class BootstrapBuilder {
         // Add action buttons
         wrapper.innerHTML = `
             <div class="component-actions">
+                <button class="component-action-btn" data-action="moveUp" title="Move Up">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+                <button class="component-action-btn" data-action="moveDown" title="Move Down">
+                    <i class="bi bi-arrow-down"></i>
+                </button>
                 <button class="component-action-btn" data-action="duplicate" title="Duplicate">
                     <i class="bi bi-copy"></i>
                 </button>
@@ -309,8 +453,10 @@ class BootstrapBuilder {
 
         if (direction === 'up' && component.previousElementSibling?.classList.contains('canvas-component')) {
             component.previousElementSibling.before(component);
+            window.toast?.info('Moved component up');
         } else if (direction === 'down' && component.nextElementSibling?.classList.contains('canvas-component')) {
             component.nextElementSibling.after(component);
+            window.toast?.info('Moved component down');
         }
 
         this.updateCodePreview();

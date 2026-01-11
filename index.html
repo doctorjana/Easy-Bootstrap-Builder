@@ -68,6 +68,47 @@
             <button class="btn-tool" id="btnPreview" title="Preview">
                 <i class="bi bi-eye"></i>
             </button>
+
+            <!-- View Controls -->
+            <div class="dropdown me-1">
+                <button class="btn-tool dropdown-toggle" type="button" id="dropdownView" data-bs-toggle="dropdown"
+                    aria-expanded="false" title="View Options">
+                    <i class="bi bi-layout-sidebar"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow border-secondary"
+                    aria-labelledby="dropdownView">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between py-2" href="#"
+                            id="toggleSidebar">
+                            <span><i class="bi bi-grid-3x3-gap me-2"></i> Components List</span>
+                            <i class="bi bi-check2 panel-status-icon" id="sidebarStatus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between py-2" href="#"
+                            id="toggleProperties">
+                            <span><i class="bi bi-sliders me-2"></i> Properties Panel</span>
+                            <i class="bi bi-check2 panel-status-icon" id="propertiesStatus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between py-2" href="#"
+                            id="toggleCode">
+                            <span><i class="bi bi-code-slash me-2"></i> HTML Preview</span>
+                            <i class="bi bi-check2 panel-status-icon" id="codeStatus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider border-secondary">
+                    </li>
+                    <li>
+                        <a class="dropdown-item py-2" href="#" id="btnResetLayout">
+                            <i class="bi bi-arrow-clockwise me-2"></i> Reset Layout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             <button class="btn-download" id="btnDownload">
                 <i class="bi bi-download"></i>
                 Download HTML
@@ -113,7 +154,7 @@
         </main>
 
         <!-- Code Preview Panel -->
-        <aside class="code-panel">
+        <aside class="code-panel" id="codePanel">
             <div class="code-header">
                 <div class="code-tabs">
                     <button class="code-tab active">
