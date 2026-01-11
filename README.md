@@ -5,6 +5,8 @@ A powerful, no-code visual website builder that leverages **Bootstrap 5.3** to c
 ![Bootstrap Builder](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+### 🌐 [Live Demo](https://doctorjana.github.io/Easy-Bootstrap-Builder/)
+
 ---
 
 ## 🎯 What is Bootstrap Builder?
@@ -62,38 +64,6 @@ Switch between professional themes instantly:
 - Visual feedback for all user actions (save, export, errors, etc.)
 
 ---
-
-## 🚀 Getting Started
-
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Edge, Safari)
-- A local web server (optional, for best experience)
-
-### Installation
-
-1. **Clone or Download** the repository:
-   ```bash
-   git clone https://github.com/your-username/bootstrap-builder.git
-   ```
-
-2. **Open in Browser**:
-   - Simply open `index.html` in your browser
-   - Or serve via a local server for full functionality:
-     ```bash
-     # Using Python
-     python -m http.server 5500
-     
-     # Using Node.js (http-server)
-     npx http-server -p 5500
-     
-     # Using VS Code Live Server extension
-     # Right-click index.html → "Open with Live Server"
-     ```
-
-3. **Start Building**:
-   - Drag components from the left sidebar onto the canvas
-   - Click components to edit their properties
-   - Export your creation when ready!
 
 ---
 
