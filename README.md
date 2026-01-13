@@ -60,53 +60,50 @@ Switch between professional themes instantly:
 - Full undo/redo history for all actions
 - Keyboard shortcuts: `Ctrl+Z` (Undo), `Ctrl+Y` (Redo)
 
-### 🔔 Toast Notifications
-- Visual feedback for all user actions (save, export, errors, etc.)
+### 🧪 Comprehensive Test Suite
+- **200+ Unit Tests** covering all core modules
+- Validates component logic, HTML generation, drag-drop rules, and editor features
+- Automated data validation for the component library
 
 ---
 
----
+## 🚀 Getting Started
 
-## 📖 How to Use
+### Prerequisites
+- [Node.js](https://nodejs.org/) (installed for running tests and development server)
 
-### Building a Page
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/doctorjana/Easy-Bootstrap-Builder.git
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd Easy-Bootstrap-Builder
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-1. **Select a Category** – Click on a category in the sidebar (e.g., "Hero Sections")
-2. **Drag a Component** – Drag your chosen component onto the canvas
-3. **Position It** – Drop it where the blue indicator appears
-4. **Customize** – Click the component to open the Properties Panel and edit text, colors, links, etc.
-5. **Repeat** – Add more components to build your complete page
+### Development Server
+Run the application locally with a development server:
+```bash
+npm run dev
+```
 
-### Editing Components
+### Running Tests
+Execute the comprehensive test suite:
+```bash
+# Run all tests
+npm test
 
-- **Click** any component on the canvas to select it
-- The **Properties Panel** (right side) shows editable options:
-  - Text content
-  - CSS classes
-  - Link URLs
-  - Image sources
-  - Button variants
-  - And more...
+# Run tests with coverage report
+npm run test:coverage
 
-### Nesting Components
-
-- Drag components **inside** layout containers:
-  - Drop into a **Container** for centered content
-  - Drop into a **Row** to utilize the grid
-  - Drop into **Columns** for multi-column layouts
-
-### Changing Themes
-
-1. Click the **Theme Dropdown** in the top toolbar
-2. Select any Bootswatch theme
-3. The entire canvas updates instantly
-
-### Exporting Your Work
-
-1. Click the **Export** button (download icon) in the toolbar
-2. Choose your export format:
-   - **Download HTML** – Saves a complete HTML file
-   - **Copy HTML** – Copies code to clipboard
+# Run tests in watch mode
+npm run test:watch
+```
 
 ---
 
@@ -115,16 +112,22 @@ Switch between professional themes instantly:
 ```
 Bootstrap/
 ├── index.html          # Main application file
+├── package.json        # Project dependencies and scripts
+├── jest.config.js      # Jest configuration
+├── .gitignore          # Git ignore file
 ├── css/
 │   └── builder.css     # Application styles
 ├── js/
 │   ├── app.js          # Main application logic
-│   ├── components.js   # Component definitions library
-│   ├── drag-drop.js    # Drag and drop functionality
-│   ├── properties.js   # Properties panel logic
-│   ├── export.js       # HTML export utilities
-│   └── themes.js       # Theme switching logic
-└── README.md           # This file
+│   ├── components.js   # Component library
+│   ├── dragdrop.js     # Drag and drop manager
+│   ├── editor.js       # Inline properties editor
+│   ├── generator.js    # HTML generation & export
+│   └── toast.js        # Notification manager
+└── tests/
+    ├── setup.js        # Test environment & mocks
+    ├── unit/           # Unit test suite
+    └── README.md       # Test documentation
 ```
 
 ---
