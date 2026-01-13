@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+
+# Package lock alternatives (keep package-lock.json)
+yarn.lock
+pnpm-lock.yaml

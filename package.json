@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-builder",
+  "version": "1.0.0",
+  "description": "Drag & Drop Bootstrap Website Builder",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "keywords": [
+    "bootstrap",
+    "builder",
+    "drag-drop",
+    "website-builder"
+  ],
+  "author": "",
+  "license": "MIT"
+}
